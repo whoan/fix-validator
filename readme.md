@@ -20,3 +20,7 @@ fix-validator < your_dictionary.xml
 - Create Dockerfile
 - Publish docker image
 - Create service
+
+## License
+
+[MIT](https://github.com/whoan/fix-validator/blob/master/LICENSE)
