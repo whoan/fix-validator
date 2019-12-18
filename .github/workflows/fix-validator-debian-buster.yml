@@ -15,7 +15,7 @@ jobs:
 
     - uses: whoan/docker-build-with-cache-action@master
       with:
-        username: "${{ secrets.DOCKER_USERNAME }}"
+        username: whoan
         password: "${{ secrets.DOCKER_PASSWORD }}"
         image_name: whoan/fix-validator
         image_tag: debian-buster
