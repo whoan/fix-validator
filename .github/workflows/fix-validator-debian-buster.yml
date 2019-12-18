@@ -17,6 +17,6 @@ jobs:
       with:
         username: whoan
         password: "${{ secrets.DOCKER_PASSWORD }}"
-        image_name: whoan/fix-validator
+        image_name: whoan/fix-validator/fix-validator
         image_tag: debian-buster
         registry: docker.pkg.github.com
