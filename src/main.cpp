@@ -1,7 +1,17 @@
 #include <quickfix/DataDictionary.h>
+#include <iostream>
+#include <fstream>
 
-int main() try {
-  FIX::DataDictionary dictionary(std::cin);
+int main(int argc, char* argv[]) try {
+  if (argc > 1) {
+    std::ifstream schema(argv[1], std::ios::binary);
+    if (!schema.is_open()) {
+      throw std::runtime_error("Error opening file: " + std::string(argv[1]));
+    }
+    FIX::DataDictionary dictionary(schema);
+  } else {
+    FIX::DataDictionary dictionary(std::cin);
+  }
   return 0;
 } catch (const std::exception& ex) {
   std::cerr << ex.what() << std::endl;
