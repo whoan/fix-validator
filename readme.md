@@ -17,8 +17,6 @@ fix-validator < your_dictionary.xml
 
 ## To-Do
 
-- Create Dockerfile
-- Publish docker image
 - Create service
 
 ## License
