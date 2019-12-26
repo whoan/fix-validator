@@ -6,7 +6,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: whoan/fix-validator:buster-slim
+    image: docker.pkg.github.com/whoan/fix-validator/fix-validator:buster-slim
     restart: always
     volumes:
       - /etc/localtime:/etc/localtime:ro
