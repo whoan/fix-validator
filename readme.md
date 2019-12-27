@@ -15,9 +15,21 @@ cmake .. && make -j$(nproc)
 fix-validator < your_dictionary.xml
 ```
 
-## To-Do
+### Use public service
 
-- Create service
+```bash
+curl -k -H "Content-Type: application/json" https://fix-validator.whoan.me/ -d"{\"data\": \"$(base64 -w0 your_schema.xml)\"}"
+```
+
+### Create a handy command to use public service
+
+```bash
+fixv() {
+  local schema
+  schema="${1:?PLease provide a FIX schema file to validate}"
+  curl -k -H "Content-Type: application/json" https://fix-validator.whoan.me/ -d"{\"data\": \"$(base64 -w0 "$schema")\"}"
+}
+```
 
 ## License
 
