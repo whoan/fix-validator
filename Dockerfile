@@ -1,4 +1,4 @@
-FROM whoan/quickfix:debian-buster as build-stage
+FROM docker.pkg.github.com/whoan/docker-images/quickfix:debian-buster as build-stage
 
 RUN \
   apt-get update && \
