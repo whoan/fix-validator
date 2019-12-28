@@ -16,7 +16,7 @@ int main(int argc, char* argv[]) try {
 } catch (const std::exception& ex) {
   std::cerr << ex.what() << std::endl;
   if (std::string(ex.what()).find("Could not parse data dictionary stream") != std::string::npos) {
-    std::cerr << "To see more details, run: xmllint --noout <document>.xml  # part of docbook-xml package" << std::endl;
+    std::cerr << "To see more details, run: xmllint --noout <document>.xml  # part of docbook-xml or libxml2-utils package" << std::endl;
   }
   return 1;
 }
